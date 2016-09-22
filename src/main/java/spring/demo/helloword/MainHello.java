@@ -10,7 +10,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class MainHello {
     public static void main(String args[]) {
         ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
-        HelloWord helloWord = (HelloWord) context.getBean("hello world");
+        HelloWord helloWord = (HelloWord) context.getBean("helloWorld");
         System.out.println(helloWord.getMessage());
     }
 }
