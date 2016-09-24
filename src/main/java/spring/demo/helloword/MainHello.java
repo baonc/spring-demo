@@ -16,6 +16,5 @@ public class MainHello {
 
         HelloWord objB = (HelloWord) context.getBean("helloWorld");
         System.out.println(objB.getMessage());
-
     }
 }

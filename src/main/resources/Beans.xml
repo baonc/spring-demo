@@ -13,4 +13,6 @@
         <property name="message" value="Hi! Iam Bean in spring"/>
     </bean>
 
+    <bean class="spring.demo.beanposprocessor.InitBean"/>
+
 </beans>
