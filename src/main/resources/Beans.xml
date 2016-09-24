@@ -9,4 +9,8 @@
         <property name="message" value="Hello World!"/>
     </bean>
 
+    <bean id="beanCycle" class="spring.demo.beanlifecycle.BeansCycle" scope="singleton">
+        <property name="message" value="Hi! Iam Bean in spring"/>
+    </bean>
+
 </beans>
