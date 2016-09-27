@@ -7,6 +7,7 @@
 
     <bean id="helloWorld" class="spring.demo.helloword.HelloWord" scope="singleton">
         <property name="message" value="Hello World!"/>
+        <property name="message2" value="Hello Second World"/>
     </bean>
 
     <bean id="beanCycle" class="spring.demo.beanlifecycle.BeansCycle" scope="singleton">
@@ -15,7 +16,9 @@
 
     <bean class="spring.demo.beanposprocessor.InitBean"/>
 
-    <bean id="vietnamHelloWorld" class="spring.demo.beaninheritance.VietnamHelloWorld" parent="helloWord">
+    <bean id="vietnamHelloWorld" class="spring.demo.beaninheritance.VietnamHelloWorld" scope="singleton"
+          parent="helloWorld">
         <property name="message" value="Vietnam say hello world"/>
+        <property name="message3" value="Xin chao Vietnam"/>
     </bean>
 </beans>

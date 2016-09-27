@@ -2,6 +2,7 @@ package spring.demo.helloword;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import spring.demo.beaninheritance.VietnamHelloWorld;
 
 /**
  * main hello word
@@ -11,10 +12,12 @@ public class MainHello {
     public static void main(String args[]) {
         ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
         HelloWord objA = (HelloWord) context.getBean("helloWorld");
-        objA.setMessage("Hi ! Iam obj A");
-        System.out.println(objA.getMessage());
+        System.out.println("HelloWorld: " + objA.getMessage());
+        System.out.println("HelloWorld: " + objA.getMessage2());
 
-        HelloWord objB = (HelloWord) context.getBean("helloWorld");
-        System.out.println(objB.getMessage());
+        VietnamHelloWorld objB = (VietnamHelloWorld) context.getBean("vietnamHelloWorld");
+        System.out.println("Vietnam: " + objB.getMessage());
+        System.out.println("Vietnam: " + objB.getMessage2());
+        System.out.println("Vietnam: " + objB.getMessage3());
     }
 }
