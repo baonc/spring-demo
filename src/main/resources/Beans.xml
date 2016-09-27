@@ -15,4 +15,7 @@
 
     <bean class="spring.demo.beanposprocessor.InitBean"/>
 
+    <bean id="vietnamHelloWorld" class="spring.demo.beaninheritance.VietnamHelloWorld" parent="helloWord">
+        <property name="message" value="Vietnam say hello world"/>
+    </bean>
 </beans>
